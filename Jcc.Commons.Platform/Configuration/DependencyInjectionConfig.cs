@@ -3,25 +3,29 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Jcc.Commons.Platform.Configuration;
 
 /// <summary>
-/// Configuración de inyección de dependencias para la plataforma de Commons.
-/// Nota: Este archivo será extendido con métodos auto-generados en DependencyInjectionConfig.g.cs
+/// Dependency injection configuration for the Commons platform.
+/// Note: This file will be extended with auto-generated methods in DependencyInjectionConfig.g.cs
 /// </summary>
 public static partial class DependencyInjectionConfig
 {
     /// <summary>
-    /// Registra los servicios de Commons en el contenedor DI.
-    /// Incluye automáticamente todos los QueryHandlers detectados por el Source Generator.
+    /// Registers the Commons services in the DI container.
+    /// Automatically includes all QueryHandlers, CommandHandlers, and gRPC services.
     /// </summary>
-    public static IServiceCollection AddPCommonsServices(this IServiceCollection services)
+    public static IServiceCollection AddCommonsServices(this IServiceCollection services)
     {
         if (services == null)
             throw new ArgumentNullException(nameof(services));
 
-        // Registra los QueryHandlers detectados automáticamente por el source generator
+        // Register QueryHandlers automatically detected by the source generator
         services.AddGeneratedQueryHandlers();
 
-        // Registra los CommandHandlers detectados automáticamente por el source generator
+        // Register CommandHandlers automatically detected by the source generator
         services.AddGeneratedCommandHandlers();
+
+        // Register gRPC services
+        services.AddGrpcServices();
+
         return services;
     }
 }

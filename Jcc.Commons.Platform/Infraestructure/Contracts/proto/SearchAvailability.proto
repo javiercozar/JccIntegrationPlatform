@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+import "Commons.proto";
+
+package HotelBooking.Common;
+
+option csharp_namespace = "HotelBooking.Grpc.SearchAvailability";
+
+// Service for searching available hotels based on provided criteria.
+service SearchAvailability {
+  // Searches for available hotels based on the provided criteria and returns a stream of search results.
+  rpc Search (SearchRequest) returns (stream SearchResponse);
+}
+
+message SearchRequest {
+  string credential_id = 1;
+  repeated string hotel_ids = 2;
+  HotelBooking.Common.StayPeriod stay = 3;
+  repeated HotelBooking.Common.Occupancy occupancies = 4;
+  int32 timeout_milliseconds = 5;
+}
+
+message SearchResponse {
+  repeated HotelResult hotel_result = 1;
+  HotelBooking.Common.Metadata metadata = 2;
+}
+
+message HotelResult {
+  string hotel_id = 1;
+  string hotel_name = 2;
+  repeated BookingOption options = 3;
+}
+
+message BookingOption {
+  string option_token = 1;
+  HotelBooking.Common.Money total_price = 2;
+  bool is_refundable = 3;
+  repeated HotelBooking.Common.CancellationPolicy cancellation_policies = 4;
+  repeated HotelBooking.Common.Tax taxes = 5;
+  repeated HotelBooking.Common.Supplement supplements = 6;
+  string remarks = 7;
+  repeated HotelBooking.Common.RoomDetail rooms = 8;
+}

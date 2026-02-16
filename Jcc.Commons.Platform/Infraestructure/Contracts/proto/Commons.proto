@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option csharp_namespace = "HotelBooking.Grpc.Common";
+
+package HotelBooking.Common;
+
+message StayPeriod {
+  string check_in = 1;
+  string check_out = 2;
+}
+
+message Occupancy {
+  repeated int32 ages = 1;
+}
+
+message Money {
+  string currency = 1;
+  double amount = 2;
+}
+
+message Tax {
+  string code = 1;
+  Money amount = 2;
+  bool included_in_price = 3;
+}
+
+message Supplement {
+  string code = 1;
+  string description = 2;
+  Money amount = 3;
+}
+
+message CancellationPolicy {
+  string from_date = 1;
+  Money penalty = 2;
+}
+
+message RoomDetail {
+  string room_code = 1;
+  string room_name = 2;
+  string board_code = 3;
+  string board_name = 4;
+  Occupancy occupancy = 5;
+}
+
+message Metadata {
+  bool is_last_batch = 1;
+  string provider_name = 2;
+  int32 results_in_this_batch = 3;
+}
