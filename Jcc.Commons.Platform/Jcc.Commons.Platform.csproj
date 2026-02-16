@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <frameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Jcc.Commons.Platform.Generators/Jcc.Commons.Platform.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Application\Book\" />
+    <Folder Include="Application\Cancel\" />
+    <Folder Include="Application\VerifyStay\" />
+    <Folder Include="Contracts\Book\" />
+    <Folder Include="Contracts\Cancel\" />
+    <Folder Include="Contracts\VerifyStay\" />
+    <Folder Include="Infraestructure\" />
+  </ItemGroup>
+
+</Project>

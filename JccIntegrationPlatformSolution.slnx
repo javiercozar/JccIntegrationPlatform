@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Jcc.Commons.Platform.Generators/Jcc.Commons.Platform.Generators.csproj" />
+  <Project Path="Jcc.Commons.Platform/Jcc.Commons.Platform.csproj" />
+</Solution>
