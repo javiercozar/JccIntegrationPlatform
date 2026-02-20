@@ -1,0 +1,6 @@
+@Jcc.Integration.Platform.Host_HostAddress = http://localhost:5226
+
+GET {{Jcc.Integration.Platform.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
