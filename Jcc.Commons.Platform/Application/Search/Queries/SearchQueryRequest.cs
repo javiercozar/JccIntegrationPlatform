@@ -1,6 +1,6 @@
-using Jcc.Commons.Platform.Contracts.Search;
+using Jcc.Commons.Platform.Grpc.Availability;
 
-namespace Jcc.Commons.Platform.Application.Search;
+namespace Jcc.Commons.Platform.Application.Search.Queries;
 
 public sealed record SearchQueryRequest(
     string[] HotelCodes,

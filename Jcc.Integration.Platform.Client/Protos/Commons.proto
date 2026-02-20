@@ -48,3 +48,4 @@ message Metadata {
   string provider_name = 2;
   int32 results_in_this_batch = 3;
 }
+

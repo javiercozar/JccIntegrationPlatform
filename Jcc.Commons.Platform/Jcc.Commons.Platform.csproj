@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -26,13 +27,14 @@
     <Protobuf Include="Infraestructure\Contracts\proto\*.proto" GrpcServices="Server" />
   </ItemGroup>
   
+  <PropertyGroup>
+    <ProtobufIncludeDirs>.</ProtobufIncludeDirs>
+  </PropertyGroup>
+  
   <ItemGroup>
     <Folder Include="Application\Book\" />
     <Folder Include="Application\Cancel\" />
     <Folder Include="Application\VerifyStay\" />
-    <Folder Include="Contracts\Book\" />
-    <Folder Include="Contracts\Cancel\" />
-    <Folder Include="Contracts\VerifyStay\" />
     <Folder Include="Infraestructure\" />
   </ItemGroup>
 

@@ -30,7 +30,7 @@ internal static class QueryHandlerCodeGenerator
             .OrderBy(g => g.Key);
 
         // Generar registros de dependencias
-        sb.AppendLine("namespace Jcc.Commons.Platform.Configuration;");
+        sb.AppendLine("namespace Jcc.Commons.Platform.Infraestructure.Configuration;");
         sb.AppendLine();
         sb.AppendLine("/// <summary>");
         sb.AppendLine("/// Extensiones de inyección de dependencias auto-generadas para QueryHandlers.");

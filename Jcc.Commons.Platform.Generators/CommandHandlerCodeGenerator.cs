@@ -89,7 +89,7 @@ internal static class CommandHandlerCodeGenerator
         sb.AppendLine("using Microsoft.Extensions.DependencyInjection;");
         sb.AppendLine("using Jcc.Commons.Platform.Domain;");
         sb.AppendLine();
-        sb.AppendLine("namespace Jcc.Commons.Platform.Configuration;");
+        sb.AppendLine("namespace Jcc.Commons.Platform.Infraestructure.Configuration;");
         sb.AppendLine();
         sb.AppendLine("public static partial class DependencyInjectionConfig");
         sb.AppendLine("{");

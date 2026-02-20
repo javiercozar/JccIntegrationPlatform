@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="Jcc.Commons.Platform.Generators/Jcc.Commons.Platform.Generators.csproj" />
   <Project Path="Jcc.Commons.Platform/Jcc.Commons.Platform.csproj" />
+  <Project Path="Jcc.Integration.Platform.Host/Jcc.Integration.Platform.Host.csproj" />
+  <Project Path="Jcc.Integration.Platform.Client/Jcc.Integration.Platform.Client.csproj" />
 </Solution>
