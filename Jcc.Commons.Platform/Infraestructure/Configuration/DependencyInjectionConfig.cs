@@ -26,6 +26,9 @@ public static partial class DependencyInjectionConfig
         // Register gRPC services
         services.AddGrpcServices();
 
+        // Register workflows
+        services.AddWorkFlows();
+
         return services;
     }
 }

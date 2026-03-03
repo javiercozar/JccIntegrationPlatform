@@ -1,4 +1,5 @@
 using Grpc.Core;
+using Jcc.Commons.Platform.Application.Search.Mappers;
 using Jcc.Commons.Platform.Application.Search.Queries;
 using Jcc.Commons.Platform.Grpc.Availability;
 using Metadata = Jcc.Commons.Platform.Grpc.Availability.Metadata;
@@ -10,7 +11,7 @@ public class SearchAvailabilityService(SearchQueryHandler searchQueryHandler) : 
     // Implement gRPC service methods here
     public override async Task Search(SearchRequest request, IServerStreamWriter<SearchResponse> responseStream, ServerCallContext context)
     {
-        //searchQueryHandler.HandleAsync(request, responseStream, context);
+        var pepe = await searchQueryHandler.HandleAsync(request.MapToSearchQueryRequest());
         
         // Generate some dummy data for testing
         var hotelResults = new List<HotelResult>
